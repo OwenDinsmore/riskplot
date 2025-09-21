@@ -1,31 +1,14 @@
 # Site settings
 title: RiskPlot Documentation
 description: Professional risk visualization for Python
-url: "https://owendinsmore.github.io"
 baseurl: "/riskplot"
+url: "https://owendinsmore.github.io"
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
-theme: minima
+theme: minimal
 
-# Plugins (GitHub Pages compatible only)
+# GitHub Pages compatible plugins only
 plugins:
   - jekyll-feed
-  - jekyll-sitemap
-
-# Markdown settings
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    block:
-      line_numbers: false
-
-# Exclude files from processing
-exclude:
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-  - vendor
-  - README.md
