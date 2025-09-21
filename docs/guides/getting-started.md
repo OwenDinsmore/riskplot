@@ -33,7 +33,7 @@ pip install riskplot[all]
 ### Development Installation
 
 ```bash
-git clone https://github.com/yourusername/riskplot.git
+git clone https://github.com/OwenDinsmore/riskplot.git
 cd riskplot
 pip install -e .[dev]
 ```
@@ -299,11 +299,10 @@ fig, ax = riskplot.country_interaction_network(trade_data)
 - [API Reference](../api/): Complete function documentation
 - [Examples Gallery](../examples/): Comprehensive examples
 - [Advanced Features](advanced-features): Power user techniques
-- [Contributing](https://github.com/yourusername/riskplot/blob/main/CONTRIBUTING.md): Help improve RiskPlot
+- [Contributing](https://github.com/OwenDinsmore/riskplot/blob/main/CONTRIBUTING.md): Help improve RiskPlot
 
 ## Getting Help
 
-- 📚 [Documentation](https://yourusername.github.io/riskplot)
-- 🐛 [Issues](https://github.com/yourusername/riskplot/issues)
-- 💬 [Discussions](https://github.com/yourusername/riskplot/discussions)
-- 📧 [Email Support](mailto:support@riskplot.com)
+- 📚 [Documentation](https://owendinsmore.github.io/riskplot)
+- 🐛 [Issues](https://github.com/OwenDinsmore/riskplot/issues)
+- 💬 [Discussions](https://github.com/OwenDinsmore/riskplot/discussions)

@@ -1,7 +1,7 @@
 # Jekyll configuration for GitHub Pages
 title: RiskPlot Documentation
 description: A comprehensive visualization package for risk analysis
-url: "https://yourusername.github.io"
+url: "https://owendinsmore.github.io"
 baseurl: "/riskplot"
 
 # Build settings
@@ -26,7 +26,7 @@ nav:
   - title: "Examples"
     url: "/examples/"
   - title: "GitHub"
-    url: "https://github.com/yourusername/riskplot"
+    url: "https://github.com/OwenDinsmore/riskplot"
 
 # Code highlighting
 kramdown:

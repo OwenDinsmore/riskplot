@@ -1,13 +1,12 @@
 ---
 layout: default
-title: RiskPlot - Risk Visualization Made Easy
+title: RiskPlot - Professional Risk Visualization for Python
 ---
 
 # RiskPlot
 
-A comprehensive Python package for risk analysis visualization, featuring ridge plots, heatmaps, waterfall charts, network diagrams, globe visualizations, and surface plots.
+RiskPlot is a production-ready Python package designed for financial risk analysis and visualization. Built for risk managers, quantitative analysts, and financial researchers who need clear, accurate, and publication-quality charts.
 
-![RiskPlot Logo](assets/logo.png)
 
 ## 🚀 Quick Start
 
@@ -52,48 +51,37 @@ fig, ax = riskplot.ridge_plot(data, 'category', 'values')
 
 ## 📊 Visualization Gallery
 
-<div class="gallery">
-  <div class="gallery-item">
-    <img src="assets/ridge_plot_example.png" alt="Ridge Plot">
-    <h3>Ridge Plots</h3>
-    <p>Compare distributions across categories</p>
-  </div>
+### Distribution Analysis
+![Ridge Plot Example](assets/images/ridge_plot_example.png)
+*Compare return distributions across multiple portfolios*
 
-  <div class="gallery-item">
-    <img src="assets/network_example.png" alt="Network Plot">
-    <h3>Network Analysis</h3>
-    <p>Visualize entity relationships</p>
-  </div>
+### Correlation Analysis
+![Heatmap Example](assets/images/heatmap_example.png)
+*Portfolio correlation matrices with clear visual indicators*
 
-  <div class="gallery-item">
-    <img src="assets/globe_example.png" alt="Globe Visualization">
-    <h3>Globe Visualizations</h3>
-    <p>Interactive geographic risk mapping</p>
-  </div>
+### Attribution Analysis
+![Waterfall Chart Example](assets/images/waterfall_example.png)
+*Return attribution across risk factors*
 
-  <div class="gallery-item">
-    <img src="assets/surface_example.png" alt="Surface Plot">
-    <h3>Surface Plots</h3>
-    <p>3D risk landscape analysis</p>
-  </div>
-</div>
+### Risk Monitoring
+![Time Series Example](assets/images/timeseries_example.png)
+*Value-at-Risk and volatility tracking over time*
 
-## 🔧 Installation Options
+## Installation
 
-### Basic Installation
 ```bash
 pip install riskplot
 ```
 
-### With Optional Dependencies
+For specialized visualizations:
 ```bash
-# For network visualizations
+# Network analysis features
 pip install riskplot[network]
 
-# For globe visualizations
+# Interactive globe charts
 pip install riskplot[globe]
 
-# For all features
+# Complete feature set
 pip install riskplot[all]
 ```
 
@@ -104,17 +92,16 @@ pip install riskplot[all]
 - [Examples Gallery](examples/)
 - [Advanced Features](guides/advanced-features)
 
-## 🤝 Contributing
+## Contributing
 
-We welcome contributions! See our [Contributing Guide](https://github.com/yourusername/riskplot/blob/main/CONTRIBUTING.md) for details.
+Contributions are welcome. Please see our [Contributing Guide](https://github.com/OwenDinsmore/riskplot/blob/main/CONTRIBUTING.md) for guidelines.
 
-## 📄 License
+## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/yourusername/riskplot/blob/main/LICENSE) file for details.
+MIT License - see [LICENSE](https://github.com/OwenDinsmore/riskplot/blob/main/LICENSE) for details.
 
-## 🔗 Links
+## Links
 
-- [GitHub Repository](https://github.com/yourusername/riskplot)
+- [GitHub Repository](https://github.com/OwenDinsmore/riskplot)
 - [PyPI Package](https://pypi.org/project/riskplot/)
-- [Issue Tracker](https://github.com/yourusername/riskplot/issues)
-- [Discussions](https://github.com/yourusername/riskplot/discussions)
+- [Issue Tracker](https://github.com/OwenDinsmore/riskplot/issues)

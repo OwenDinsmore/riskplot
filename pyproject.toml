@@ -9,7 +9,7 @@ description = "A comprehensive visualization package for risk analysis with ridg
 readme = "README.md"
 license = {text = "MIT"}
 authors = [
-    {name = "Your Name", email = "your.email@example.com"}
+    {name = "Owen Dinsmore", email = "owen.dinsmore@example.com"}
 ]
 keywords = ["visualization", "risk", "ridge plots", "heatmaps", "waterfall charts", "matplotlib", "pandas", "finance", "timeseries"]
 classifiers = [
@@ -46,10 +46,10 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/ocedi/riskplot"
-Documentation = "https://ocedi.github.io/riskplot"
-Repository = "https://github.com/ocedi/riskplot"
-"Bug Tracker" = "https://github.com/ocedi/riskplot/issues"
+Homepage = "https://github.com/OwenDinsmore/riskplot"
+Documentation = "https://owendinsmore.github.io/riskplot"
+Repository = "https://github.com/OwenDinsmore/riskplot"
+"Bug Tracker" = "https://github.com/OwenDinsmore/riskplot/issues"
 
 [tool.setuptools.packages.find]
 where = ["."]
