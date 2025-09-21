@@ -1,6 +1,7 @@
 ---
 layout: default
-title: RiskPlot - Professional Risk Visualization for Python
+title: RiskPlot Documentation
+description: Professional risk visualization for Python
 ---
 
 # RiskPlot
@@ -8,7 +9,7 @@ title: RiskPlot - Professional Risk Visualization for Python
 RiskPlot is a production-ready Python package designed for financial risk analysis and visualization. Built for risk managers, quantitative analysts, and financial researchers who need clear, accurate, and publication-quality charts.
 
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 pip install riskplot
@@ -29,7 +30,7 @@ data = pd.DataFrame({
 fig, ax = riskplot.ridge_plot(data, 'category', 'values')
 ```
 
-## ✨ Features
+## Features
 
 ### Core Visualizations
 - **Ridge Plots**: Distribution comparisons across categories
@@ -49,7 +50,7 @@ fig, ax = riskplot.ridge_plot(data, 'category', 'values')
 - **Network Analysis**: Financial interconnectedness, trade relationships
 - **Stress Testing**: Scenario analysis and surface optimization
 
-## 📊 Visualization Gallery
+## Visualization Gallery
 
 ### Distribution Analysis
 ![Ridge Plot Example](assets/images/ridge_plot_example.png)
@@ -66,6 +67,18 @@ fig, ax = riskplot.ridge_plot(data, 'category', 'values')
 ### Risk Monitoring
 ![Time Series Example](assets/images/timeseries_example.png)
 *Value-at-Risk and volatility tracking over time*
+
+### Risk Assessment
+![Risk Matrix Example](assets/images/risk_matrix_example.png)
+*Probability vs impact risk assessment matrix*
+
+### Performance Analysis
+![Drawdown Example](assets/images/drawdown_example.png)
+*Portfolio drawdown analysis and high water marks*
+
+### Geographic Risk
+![Country Risk Example](assets/images/country_risk_example.png)
+*Country-level risk assessment and scoring*
 
 ## Installation
 

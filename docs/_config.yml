@@ -1,6 +1,6 @@
-# Jekyll configuration for GitHub Pages
+# Site settings
 title: RiskPlot Documentation
-description: A comprehensive visualization package for risk analysis
+description: Professional risk visualization for Python
 url: "https://owendinsmore.github.io"
 baseurl: "/riskplot"
 
@@ -9,68 +9,23 @@ markdown: kramdown
 highlighter: rouge
 theme: minima
 
-# Plugins
+# Plugins (GitHub Pages compatible only)
 plugins:
   - jekyll-feed
   - jekyll-sitemap
-  - jekyll-seo-tag
 
-# Navigation
-nav:
-  - title: "Home"
-    url: "/"
-  - title: "Getting Started"
-    url: "/guides/getting-started"
-  - title: "API Reference"
-    url: "/api/"
-  - title: "Examples"
-    url: "/examples/"
-  - title: "GitHub"
-    url: "https://github.com/OwenDinsmore/riskplot"
-
-# Code highlighting
+# Markdown settings
 kramdown:
+  input: GFM
   syntax_highlighter: rouge
   syntax_highlighter_opts:
-    css_class: 'highlight'
-    span:
-      line_numbers: false
     block:
-      line_numbers: true
+      line_numbers: false
 
-# Collections
-collections:
-  examples:
-    output: true
-    permalink: /:collection/:name/
-  guides:
-    output: true
-    permalink: /:collection/:name/
-
-# Defaults
-defaults:
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "default"
-  - scope:
-      path: ""
-      type: "examples"
-    values:
-      layout: "example"
-  - scope:
-      path: ""
-      type: "guides"
-    values:
-      layout: "guide"
-
-# Exclude from processing
+# Exclude files from processing
 exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+  - vendor
+  - README.md
