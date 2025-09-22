@@ -200,7 +200,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🔗 Links
 
 - **[PyPI Package](https://pypi.org/project/riskplot/)**
-- **[Documentation](https://yourusername.github.io/riskplot)**
+- **[Documentation](https://owendinsmore.github.io/riskplot)**
 - **[GitHub Repository](https://github.com/yourusername/riskplot)**
 - **[Issue Tracker](https://github.com/yourusername/riskplot/issues)**
 
