@@ -190,6 +190,10 @@ def ridge_plot(
 
             values = subset[value_col].values
 
+            # Skip if not enough data points for KDE
+            if len(values) < 2:
+                continue
+
             # Create KDE
             kde = gaussian_kde(values, bw_method=bandwidth)
             x = np.linspace(value_min, value_max, 200)

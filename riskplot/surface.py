@@ -139,7 +139,7 @@ class CorrelationSurface(SurfaceRiskPlot):
 
         fig = go.Figure(data=[go.Surface(
             x=x_grid, y=y_grid, z=corr_matrix.values,
-            colorscale='RdBu', zmid=0
+            colorscale='RdBu', cmid=0
         )])
 
         fig.update_layout(

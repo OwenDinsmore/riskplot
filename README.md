@@ -55,12 +55,16 @@ import pandas as pd
 import numpy as np
 
 # Create sample data
-data = pd.DataFrame({
-    'category': ['Portfolio A', 'Portfolio B', 'Portfolio C'],
-    'returns': [np.random.normal(0.05, 0.1, 100),
-                np.random.normal(0.03, 0.08, 100),
-                np.random.normal(0.07, 0.15, 100)]
-})
+np.random.seed(42)  # For reproducible results
+returns_data = []
+for portfolio, (mean, std) in [('Portfolio A', (0.05, 0.1)),
+                               ('Portfolio B', (0.03, 0.08)),
+                               ('Portfolio C', (0.07, 0.15))]:
+    returns = np.random.normal(mean, std, 100)
+    for ret in returns:
+        returns_data.append({'category': portfolio, 'returns': ret})
+
+data = pd.DataFrame(returns_data)
 
 # Ridge plot
 fig, ax = riskplot.ridge_plot(data, 'category', 'returns')

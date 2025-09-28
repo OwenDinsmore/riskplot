@@ -346,13 +346,17 @@ class TestDocumentationExamples:
 
     def test_readme_examples(self):
         """Test examples from README work."""
-        # Basic example from README
-        data = pd.DataFrame({
-            'category': ['Portfolio A', 'Portfolio B', 'Portfolio C'],
-            'returns': [np.random.normal(0.05, 0.1, 100),
-                       np.random.normal(0.03, 0.08, 100),
-                       np.random.normal(0.07, 0.15, 100)]
-        })
+        # Basic example from README - create proper data structure
+        np.random.seed(42)  # For reproducible tests
+        returns_data = []
+        for portfolio, (mean, std) in [('Portfolio A', (0.05, 0.1)),
+                                       ('Portfolio B', (0.03, 0.08)),
+                                       ('Portfolio C', (0.07, 0.15))]:
+            returns = np.random.normal(mean, std, 100)
+            for ret in returns:
+                returns_data.append({'category': portfolio, 'returns': ret})
+
+        data = pd.DataFrame(returns_data)
 
         # This should work without error
         fig, ax = riskplot.ridge_plot(data, 'category', 'returns')
