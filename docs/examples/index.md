@@ -145,20 +145,40 @@ fig = riskplot.risk_landscape(
 
 [View complete example →](https://github.com/OwenDinsmore/riskplot/blob/master/examples/surface_plot_example.py)
 
-### Geographic Risk
-Visualize country-level risk assessments.
+### Geographic Risk ⭐ NEW & ENHANCED
+Visualize country-level risk assessments with both 2D and 3D capabilities.
 
 ```python
-# Country risk visualization
+# NEW: 2D Flat World Map (most common for reports)
+fig = riskplot.country_choropleth_map(
+    country_data,
+    country_col='Country',
+    value_col='Risk_Score',
+    title='Global Risk Assessment - 2D Map',
+    color_scale='RdYlGn_r'
+)
+
+# Enhanced: 3D Interactive Globe
 fig = riskplot.country_risk_globe(
     country_data,
-    country_col='ISO_Code',
-    risk_col='Risk_Score',
-    title='Global Country Risk Assessment'
+    country='ISO_Code',
+    risk='Risk_Score',
+    title='Global Country Risk Assessment - 3D Globe'
+)
+
+# NEW: Regional Analysis
+fig, ax = riskplot.regional_risk_heatmap(
+    regional_data,
+    region_col='Region',
+    country_col='Country',
+    value_col='Risk_Score',
+    title='Risk by Region and Country'
 )
 ```
 
-[View complete example →](https://github.com/OwenDinsmore/riskplot/blob/master/examples/country_risk_example.py)
+**Enhanced Examples:**
+- [View comprehensive country mapping example →](https://github.com/OwenDinsmore/riskplot/blob/master/examples/comprehensive_country_mapping.py) **NEW**
+- [View basic country risk example →](https://github.com/OwenDinsmore/riskplot/blob/master/examples/country_risk_example.py)
 
 ## Usage Patterns
 

@@ -4,14 +4,14 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "riskplot"
-version = "0.2.0"
-description = "A comprehensive visualization package for risk analysis with ridge plots, heatmaps, waterfall charts, and time series tools"
+version = "0.3.0"
+description = "A comprehensive visualization package for risk analysis with ridge plots, heatmaps, waterfall charts, time series tools, and advanced 2D/3D country mapping"
 readme = "README.md"
 license = {text = "MIT"}
 authors = [
-    {name = "Owen Dinsmore", email = "owen.dinsmore@example.com"}
+    {name = "Owen Dinsmore", email = "owen@yourdomain.com"}
 ]
-keywords = ["visualization", "risk", "ridge plots", "heatmaps", "waterfall charts", "matplotlib", "pandas", "finance", "timeseries"]
+keywords = ["visualization", "risk", "ridge plots", "heatmaps", "waterfall charts", "matplotlib", "pandas", "finance", "timeseries", "geographic", "country mapping", "choropleth", "globe visualization", "2D maps", "3D maps"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Financial and Insurance Industry",

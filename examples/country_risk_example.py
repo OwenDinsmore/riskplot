@@ -28,8 +28,8 @@ def main():
     try:
         fig = riskplot.country_risk_globe(
             data,
-            country_col='ISO_Code',
-            risk_col='Risk_Score',
+            country='ISO_Code',
+            risk='Risk_Score',
             title='Global Country Risk Assessment'
         )
 

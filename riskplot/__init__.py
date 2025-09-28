@@ -34,7 +34,8 @@ except ImportError:
 
 try:
     from .globe import (
-        GlobeRiskPlot, country_risk_globe, trade_flow_globe
+        GlobeRiskPlot, country_risk_globe, trade_flow_globe,
+        WorldMapPlot, country_choropleth_map, regional_risk_heatmap
     )
     from .globe import HAS_PLOTLY
     _GLOBE_AVAILABLE = HAS_PLOTLY
@@ -57,7 +58,7 @@ from .base import (
     DataProcessor, ValidationHelper
 )
 
-__version__ = "0.2.0"
+__version__ = "0.3.0"
 
 # Build __all__ list dynamically based on available modules
 __all__ = [
@@ -112,7 +113,10 @@ if _GLOBE_AVAILABLE:
     __all__.extend([
         "country_risk_globe",
         "trade_flow_globe",
-        "GlobeRiskPlot"
+        "GlobeRiskPlot",
+        "country_choropleth_map",
+        "regional_risk_heatmap",
+        "WorldMapPlot"
     ])
 
 if _SURFACE_AVAILABLE:

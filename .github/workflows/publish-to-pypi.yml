@@ -4,19 +4,11 @@ on:
   release:
     types: [published]
   workflow_dispatch:
-    inputs:
-      environment:
-        description: 'Deployment environment'
-        required: true
-        default: 'testpypi'
-        type: choice
-        options:
-          - testpypi
-          - pypi
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: pypi
     permissions:
       id-token: write
       contents: read
@@ -47,27 +39,14 @@ jobs:
     - name: Check distribution
       run: twine check dist/*
 
-    - name: Publish to Test PyPI
-      if: github.event_name == 'workflow_dispatch' && github.event.inputs.environment == 'testpypi'
-      uses: pypa/gh-action-pypi-publish@release/v1
-      with:
-        repository-url: https://test.pypi.org/legacy/
-
     - name: Publish to PyPI
-      if: (github.event_name == 'release' && github.event.action == 'published') || (github.event_name == 'workflow_dispatch' && github.event.inputs.environment == 'pypi')
       uses: pypa/gh-action-pypi-publish@release/v1
 
     - name: Create deployment summary
       run: |
         echo "## 🚀 Deployment Summary" >> $GITHUB_STEP_SUMMARY
         echo "- **Package**: riskplot" >> $GITHUB_STEP_SUMMARY
-        echo "- **Version**: $(python setup.py --version)" >> $GITHUB_STEP_SUMMARY
-        if [[ "${{ github.event.inputs.environment }}" == "testpypi" || "${{ github.event_name }}" == "workflow_dispatch" ]]; then
-          echo "- **Environment**: Test PyPI" >> $GITHUB_STEP_SUMMARY
-          echo "- **URL**: https://test.pypi.org/project/riskplot/" >> $GITHUB_STEP_SUMMARY
-          echo "- **Install**: \`pip install -i https://test.pypi.org/simple/ riskplot\`" >> $GITHUB_STEP_SUMMARY
-        else
-          echo "- **Environment**: Production PyPI" >> $GITHUB_STEP_SUMMARY
-          echo "- **URL**: https://pypi.org/project/riskplot/" >> $GITHUB_STEP_SUMMARY
-          echo "- **Install**: \`pip install riskplot\`" >> $GITHUB_STEP_SUMMARY
-        fi
+        echo "- **Version**: $(python -c "import tomllib; print(tomllib.load(open('pyproject.toml', 'rb'))['project']['version'])")" >> $GITHUB_STEP_SUMMARY
+        echo "- **Environment**: Production PyPI" >> $GITHUB_STEP_SUMMARY
+        echo "- **URL**: https://pypi.org/project/riskplot/" >> $GITHUB_STEP_SUMMARY
+        echo "- **Install**: \`pip install riskplot\`" >> $GITHUB_STEP_SUMMARY

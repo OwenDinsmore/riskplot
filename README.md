@@ -18,7 +18,7 @@ A comprehensive Python package for risk analysis visualization, featuring ridge 
 
 ### Advanced Visualizations ✨
 - **Network Plots**: Entity relationship networks (requires `networkx`)
-- **Globe Visualizations**: Interactive geographic risk mapping (requires `plotly`)
+- **Geographic Maps**: Professional 2D world maps and interactive 3D globes (requires `plotly`)
 - **Surface Plots**: 2D/3D risk landscapes (requires `plotly`, `scipy`)
 
 ## 🎯 Use Cases
@@ -77,12 +77,21 @@ network_data = pd.DataFrame({
 })
 fig, ax = riskplot.country_interaction_network(network_data)
 
-# Interactive globe (requires plotly)
+# 2D World Map (NEW - most common for reports)
 country_data = pd.DataFrame({
-    'country': ['USA', 'CHN', 'GBR'],
-    'risk_score': [0.3, 0.7, 0.4]
+    'country': ['USA', 'CHN', 'GBR', 'DEU', 'JPN'],
+    'risk_score': [0.25, 0.65, 0.35, 0.20, 0.30]
 })
-fig = riskplot.country_risk_globe(country_data)
+fig = riskplot.country_choropleth_map(country_data,
+                                     country_col='country',
+                                     value_col='risk_score',
+                                     title='Global Risk Assessment')
+fig.show()
+
+# Interactive 3D globe (enhanced)
+fig = riskplot.country_risk_globe(country_data,
+                                 country='country',
+                                 risk='risk_score')
 fig.show()
 ```
 
@@ -119,6 +128,18 @@ rp.pnl_waterfall(data, 'component', 'amount')
 
 # VaR decomposition
 rp.var_decomposition(data, 'component', 'var_contribution')
+```
+
+### Geographic Visualization (NEW in v0.3.0)
+```python
+# 2D Flat World Map - Perfect for reports and presentations
+rp.country_choropleth_map(data, 'country', 'risk_score')
+
+# 3D Interactive Globe - Engaging for stakeholder meetings
+rp.country_risk_globe(data, 'country', 'risk_score')
+
+# Regional Risk Heatmap - Compare regions and countries
+rp.regional_risk_heatmap(data, 'region', 'country', 'risk_score')
 ```
 
 ### Distribution Plots
